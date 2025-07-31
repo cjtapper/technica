@@ -13,7 +13,7 @@
   --color-warning: #f9b836;
   --color-danger: #db4430;
   --color-info: #41a1ea;
-  --color-orange: #FE5000;
+  --color-orange: #FF5F1F;
 
   --font-sans: sans-serif;
   --font-serif: serif;
@@ -294,7 +294,7 @@ section + section {
   margin-left: auto;
 }
 
-nav.vertical > ul {
+nav.vertical ul {
   font-family: var(--font-sans);
   list-style-type: none;
   padding-inline-start: 0;
@@ -304,9 +304,6 @@ nav.vertical > ul {
   }
 
   & > li.active {
-    > a {
-      font-weight: bold;
-    }
     &::before {
       content: "";
       position: absolute;
