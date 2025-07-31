@@ -13,6 +13,7 @@
   --color-warning: #f9b836;
   --color-danger: #db4430;
   --color-info: #41a1ea;
+  --color-orange: #FE5000;
 
   --font-sans: sans-serif;
   --font-serif: serif;
@@ -35,6 +36,7 @@
 
 h1, h2, h3, h4, h5, h6 {
   margin-block-start: 0;
+  text-transform: uppercase;
 }
 
 p, ol, ul {
@@ -290,4 +292,32 @@ section + section {
 
 .ml-auto {
   margin-left: auto;
+}
+
+nav.vertical > ul {
+  font-family: var(--font-sans);
+  list-style-type: none;
+  padding-inline-start: 0;
+
+  > li {
+    position: relative;
+  }
+
+  & > li.active {
+    > a {
+      font-weight: bold;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: -0.75em;
+      top: 0.33em; /* adjust based on font size */
+      width: 0.5em;
+      height: 0.5em;
+      background-color: var(--color-orange);
+      border: 1px solid black;
+      box-sizing: border-box;
+    }
+  }
+}
 }
