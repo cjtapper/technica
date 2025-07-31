@@ -12,6 +12,7 @@
   --color-primary: #529463;
   --color-warning: #f9b836;
   --color-danger: #db4430;
+  --color-info: #41a1ea;
 
   --font-sans: sans-serif;
   --font-serif: serif;
@@ -32,7 +33,7 @@
   box-sizing: border-box;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   margin-block-start: 0;
 }
 
@@ -149,6 +150,10 @@ button {
     background-color: var(--color-danger);
     color: white;
   }
+  &.info {
+    background-color: var(--color-info);
+    color: white;
+  }
   &:hover:not(:disabled):not(:active){
     background-color: black;
     color: white;
@@ -208,9 +213,18 @@ hr {
 
 footer {
   font-family: var(--font-sans);
+  color: var(--color-dark-grey);
   border-top: 1px solid black;
   padding-top: var(--s1);
   margin-top: var(--s1);
+}
+
+section {
+  padding-top: var(--s1);
+  padding-bottom: var(--s1);
+}
+section + section {
+  border-top: 1px dashed black;
 }
 
 .overflow-hidden {
@@ -253,6 +267,15 @@ footer {
   }
   &.danger {
     background-color: var(--color-danger);
+    color: white;
+  }
+  &.neutral {
+    background-color: var(--color-mid-grey);
+    color: var(--color-dark-grey);
+    border: 1px solid var(--color-dark-grey);
+  }
+  &.info {
+    background-color: var(--color-info);
     color: white;
   }
 }
